@@ -1,9 +1,14 @@
 import React from 'react'
+import Menu from './Menu'
 
 const Navbar = () => {
   return (
     <div>
-      Navbar
+      {/*LOGO*/}
+      {/*MOBILE MENU*/}
+      <div>
+        <Menu/>
+      </div>
     </div>
   )
 }

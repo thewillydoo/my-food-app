@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div>
       {/*LOGO*/}
-      <div>
+      <div className='h-12 text-red-500 p-4 flex items-center justify-between'>
         <Link href="/">
         Willy's Pizza Creations
         </Link>

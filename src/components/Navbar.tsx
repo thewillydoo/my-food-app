@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
-    <div>
+    <div className='h-12 text-red-500 p-4 flex items-center justify-between border-b-2 border-b-red-500 uppercase'>
       {/*LOGO*/}
-      <div className='h-12 text-red-500 p-4 flex items-center justify-between'>
+      <div >
         <Link href="/">
-        Willy's Pizza Creations
+        Viva Gusto Grille
         </Link>
       </div>
       {/*MOBILE MENU*/}

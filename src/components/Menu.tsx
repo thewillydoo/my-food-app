@@ -39,24 +39,30 @@ const Menu = () => {
           className="cursor-pointer"
         />
       )}
-      
-      {open && (<div className="bg-red-500 text-white absolute top-24 left-0 w-full h-[calc(100vh-6rem)] z-10 flex flex-col gap-8 items-center justify-center text-3xl">
-        {links.map((item) => (
-          <Link href={item.url} onClick={() => setOpen(false)}>
-            {item.title}
+      {/**/}
+      {open && (
+        <div className="bg-red-500 text-white absolute top-24 left-0 w-full h-[calc(100vh-6rem)] z-10 flex flex-col gap-8 items-center justify-center text-3xl">
+          {links.map((item) => (
+            <Link href={item.url} onClick={() => setOpen(false)}>
+              {item.title}
+            </Link>
+          ))}
+
+          {!user ? (
+            <Link href="/login" onClick={() => setOpen(false)}>
+              Login
+            </Link>
+          ) : (
+            <Link href="/orders" onClick={() => setOpen(false)}>
+              Orders
+            </Link>
+          )}
+
+          <Link href="/cart" onClick={() => setOpen(false)}>
+            <CartIcon />
           </Link>
-        ))}
-
-        {!user ? (
-          <Link href="/login" onClick={() => setOpen(false)}>Login</Link>
-        ) : (
-          <Link href="/orders" onClick={() => setOpen(false)}>Orders</Link>
-        )}
-
-        <Link href="/cart" onClick={() => setOpen(false)}>
-          <CartIcon />
-        </Link>
-      </div>)}
+        </div>
+      )}
     </div>
   );
 };

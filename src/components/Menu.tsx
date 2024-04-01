@@ -17,6 +17,7 @@ const Menu = () => {
 
   //TEMPORARY
   const user = false;
+
   return (
     <div>
       {!open ? (
@@ -26,6 +27,7 @@ const Menu = () => {
           width={20}
           height={20}
           onClick={() => setOpen(true)}
+          className="cursor-pointer"
         />
       ) : (
         <Image
@@ -34,20 +36,27 @@ const Menu = () => {
           width={20}
           height={20}
           onClick={() => setOpen(false)}
+          className="cursor-pointer"
         />
       )}
-      <div className="bg-red-500 text-white absolute top-24 left-0 w-full h-[calc(100vh-6rem)] z-10 flex flex-col gap-8 items-center justify-center text-3xl">
+      
+      {open && (<div className="bg-red-500 text-white absolute top-24 left-0 w-full h-[calc(100vh-6rem)] z-10 flex flex-col gap-8 items-center justify-center text-3xl">
         {links.map((item) => (
-          <Link href={item.url}>{item.title}</Link>
+          <Link href={item.url} onClick={() => setOpen(false)}>
+            {item.title}
+          </Link>
         ))}
 
         {!user ? (
-          <Link href="/login">Login</Link>
+          <Link href="/login" onClick={() => setOpen(false)}>Login</Link>
         ) : (
-          <Link href="/orders">Orders</Link>
+          <Link href="/orders" onClick={() => setOpen(false)}>Orders</Link>
         )}
-        <Link href="/cart"><CartIcon/></Link>
-      </div>
+
+        <Link href="/cart" onClick={() => setOpen(false)}>
+          <CartIcon />
+        </Link>
+      </div>)}
     </div>
   );
 };

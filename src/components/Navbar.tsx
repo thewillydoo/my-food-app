@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link href="/">Contact</Link>
       </div>
       {/*LOGO*/}
-      <div className="text-xl md:font-bold flex-1 md:text-center">
+      <div className="text-xl font-bold flex-1 md:text-center">
         <Link href="/">Viva Gusto Grille</Link>
       </div>
       {/*MOBILE MENU*/}

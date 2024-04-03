@@ -26,7 +26,7 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(2)
 
   useEffect(() => {
-   
+    
   }
   return (
     <div className='flex flex-col h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)]'>

@@ -26,7 +26,11 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(() => {
-    console.log('use effect ran')
+    // runs the function every 2 seconds
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === data.length -1 ? 0 : prev + 1))
+    }, 2000)
+    return () => clearInterval(interval)
   })
 
   return (

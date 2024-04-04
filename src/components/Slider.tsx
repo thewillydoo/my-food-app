@@ -23,11 +23,12 @@ const data = [
 ]
 
 const Slider = () => {
-  const [currentSlide, setCurrentSlide] = useState(2)
+  const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(() => {
-    
-  }
+    console.log('use effect ran')
+  })
+
   return (
     <div className='flex flex-col h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)]'>
       {/* TEXT CONTAINER */}

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Featured = () => {
   return (
-    <div className=''>
+    <div className='w-screen overflow-x-scroll'>
       {/* WRAPPER */}
       <div className=''>
         {/* SINGLE ITEM */}
@@ -17,7 +17,7 @@ const Featured = () => {
             <h1>title</h1>
             <p>description</p>
             <span>Price</span>
-            <button>Order Now</button>
+            <button>Add to Cart</button>
           </div>
         </div>
       </div>

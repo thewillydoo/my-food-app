@@ -39,7 +39,7 @@ const Menu = () => {
           className="cursor-pointer"
         />
       )}
-      {/**/}
+      {/*RUN THIS ONLY IF IT IS OPEN*/}
       {open && (
         <div className="bg-red-500 text-white absolute top-24 left-0 w-full h-[calc(100vh-6rem)] z-10 flex flex-col gap-8 items-center justify-center text-3xl">
           {links.map((item) => (

@@ -1,3 +1,4 @@
+import { featuredProducts } from '@/data'
 import Image from 'next/image'
 import React from 'react'
 
@@ -7,19 +8,21 @@ const Featured = () => {
       {/* WRAPPER */}
       <div className='w-max flex'>
         {/* SINGLE ITEM */}
-        <div className='w-screen h-[60vh] flex flex-col items-center justify-around p-4'>
+        {featuredProducts.map((item)=>(
+        <div className='w-screen h-[60vh] flex flex-col items-center justify-around p-4 hover:bg-fuchsia-50 transition-all duration-300'>
           {/* IMAGE CONTAINER */}
-          <div className='relative flex-1 w-full'>
-            <Image src='/temporary/p1.png' alt='' fill className='object-contain'/>
-          </div>
+          {item.img && <div className='relative flex-1 w-full hover:rotate-[60deg] transition-all duration-500'>
+            <Image src={item.img} alt='' fill className='object-contain'/>
+          </div>}
           {/* TEXT CONTAINER  */}
-          <div className='flex-1 flex flex-col gap-4'>
-            <h1 className='text-xl font-bold uppercase'>title</h1>
-            <p>description</p>
-            <span className='text-xl font-bold'>$123.99</span>
+          <div className='flex-1 flex flex-col items-center text-center gap-4'>
+            <h1 className='text-xl font-bold uppercase'>{item.title}</h1>
+            <p className='p-4'>{item.desc}</p>
+            <span className='text-xl font-bold'>${item.price}</span>
             <button className='bg-red-500 text-white p-2 rounded-md'>Add to Cart</button>
           </div>
         </div>
+        ))}
       </div>
     </div>
   )

@@ -10,7 +10,7 @@ const Featured = () => {
         <div className='w-screen h-[60vh] flex flex-col items-center justify-around'>
           {/* IMAGE CONTAINER */}
           <div className='relative flex-1 w-full'>
-            <Image src='' alt=''/>
+            <Image src='/temporary/p1.png' alt='' fill/>
           </div>
           {/* TEXT CONTAINER  */}
           <div className=''>

@@ -5,9 +5,9 @@ const Featured = () => {
   return (
     <div className='w-screen overflow-x-scroll text-red-500 '>
       {/* WRAPPER */}
-      <div className=''>
+      <div className='w-max flex'>
         {/* SINGLE ITEM */}
-        <div className=''>
+        <div className='w-screen h-[60vh] flex flex-col items-center justify-around'>
           {/* IMAGE CONTAINER */}
           <div className='relative'>
             <Image src='' alt=''/>

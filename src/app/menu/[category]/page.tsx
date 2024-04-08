@@ -11,7 +11,7 @@ const CategoryPage = () => {
       <Link className='' href={`/product/${item.id}`}>
         {/* IMAGE CONTAINER */}
         {item.img && (
-          <div>
+          <div className='relative'>
             <Image src={item.img} alt="" fill/>
           </div>
         )}

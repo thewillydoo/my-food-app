@@ -9,7 +9,7 @@ const MenuPage = () => {
         <Link
           href={category.slug}
           className=""
-          style={{ backgroundImage: "url(${category.img})" }}
+          style={{ backgroundImage: `url(${category.img})` }} 
         >
           <div className="">
             <h1 className="">{category.title}</h1>
